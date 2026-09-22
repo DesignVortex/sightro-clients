@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercedes-Benz Places | Binghatti</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        midnight: '#0A0A0A',
+                        graphite: '#171717',
+                        pearl: '#F8F9FA',
+                        silver: '#E2E8F0',
+                        cyan: '#00E5FF'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "url('https://media.springfieldproperties.ae/Mercedes_Benz_Places_by_Binghatti_at_Downtown_01_8bda65f2b1.webp')",
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0A0A0A;
+            color: #F8F9FA;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        .font-display {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .text-glow:hover {
+            text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+            color: #00E5FF;
+            transition: all 0.3s ease;
+        }
+
+        .border-glow:hover {
+            border-color: #00E5FF;
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        /* Abstract structural dividers */
+        .hairline {
+            height: 1px;
+            background: linear-gradient(90deg, rgba(226, 232, 240, 0) 0%, rgba(226, 232, 240, 0.2) 50%, rgba(226, 232, 240, 0) 100%);
+        }
+    </style>
+</head>
+
+<body class="selection:bg-silver selection:text-midnight">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 top-0 border-b border-silver/10 bg-midnight/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="text-xl tracking-[0.2em] font-display uppercase text-pearl">
+                Mercedes-Benz <span class="text-silver/50">Places</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-sm uppercase tracking-widest text-silver">
+                <a href="#vision" class="hover:text-cyan transition-colors duration-300">Vision</a>
+                <a href="#specs" class="hover:text-cyan transition-colors duration-300">Specs</a>
+                <a href="#floorplans" class="hover:text-cyan transition-colors duration-300">Floorplans</a>
+                <a href="#payment" class="hover:text-cyan transition-colors duration-300">Payment</a>
+            </div>
+            <a href="#inquire"
+                class="border border-silver/20 px-6 py-2 text-sm uppercase tracking-widest hover:bg-silver hover:text-midnight transition-colors duration-300">
+                Inquire
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen w-full flex items-end justify-center pb-24 overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <div
+                class="absolute inset-0 bg-hero-pattern bg-cover bg-center scale-105 animate-[pulse_20s_ease-in-out_infinite_alternate]">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/80 to-transparent"></div>
+            <div class="absolute inset-0 bg-black/40"></div>
+        </div>
+
+        <div
+            class="relative z-10 w-full max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-end gap-8">
+            <div class="max-w-3xl">
+                <h1
+                    class="text-5xl md:text-7xl lg:text-8xl font-display font-light uppercase tracking-tighter leading-[0.9] text-pearl mb-6">
+                    A Visionary <br>
+                    <span class="text-silver/60">Collaboration.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-silver/80 font-light max-w-xl leading-relaxed">
+                    Off-plan 2 to 7-bedroom penthouses by Binghatti Properties in Downtown Dubai. Design, scale, and
+                    privacy unmatched.
+                </p>
+            </div>
+
+            <!-- Data Bar -->
+            <div
+                class="flex flex-col gap-6 md:text-right border-l md:border-l-0 md:border-r border-cyan/30 pl-6 md:pr-6 md:pl-0 shrink-0">
+                <div>
+                    <div class="text-xs uppercase tracking-[0.2em] text-silver/50 mb-1">Starting Price</div>
+                    <div class="text-2xl font-display text-pearl">AED 8,800,000</div>
+                </div>
+                <div>
+                    <div class="text-xs uppercase tracking-[0.2em] text-silver/50 mb-1">Handover</div>
+                    <div class="text-2xl font-display text-pearl">Q4 2026</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="hairline w-full"></div>
+
+    <!-- The Vision -->
+    <section id="vision" class="py-32 relative bg-pearl text-midnight">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32">
+            <div>
+                <h2 class="text-sm uppercase tracking-[0.3em] text-cyan-600 mb-8">01 / The Concept</h2>
+                <h3 class="text-3xl md:text-5xl font-display font-light leading-tight mb-8">
+                    An architectural marvel inspired by automotive perfection.
+                </h3>
+            </div>
+            <div class="flex flex-col justify-center">
+                <p class="text-midnight/70 leading-relaxed mb-8">
+                    Each home is elevated by slab-to-slab ceiling heights of 4.2 metres, panoramic views of Burj Khalifa
+                    and Dubai Canal, and bespoke interiors that balance sophistication and serenity.
+                </p>
+                <p class="text-midnight/70 leading-relaxed">
+                    Buyers can choose between furnished and unfurnished layouts, while every penthouse includes private
+                    parking and direct access to exclusive lifestyle amenities.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Specifications / Facts -->
+    <section id="specs" class="py-24 bg-graphite/30 border-y border-silver/10 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-sm uppercase tracking-[0.3em] text-silver/50 mb-16">02 / Specifications</h2>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-silver/10">
+                <div
+                    class="bg-midnight p-8 flex flex-col justify-between aspect-square md:aspect-auto md:h-48 group hover:bg-graphite transition-colors">
+                    <span class="text-cyan text-sm uppercase tracking-widest">Scale</span>
+                    <span class="text-4xl font-display">65 Floors</span>
+                </div>
+                <div
+                    class="bg-midnight p-8 flex flex-col justify-between aspect-square md:aspect-auto md:h-48 group hover:bg-graphite transition-colors">
+                    <span class="text-cyan text-sm uppercase tracking-widest">Exclusivity</span>
+                    <span class="text-4xl font-display">150 Suites</span>
+                </div>
+                <div
+                    class="bg-midnight p-8 flex flex-col justify-between aspect-square md:aspect-auto md:h-48 group hover:bg-graphite transition-colors">
+                    <span class="text-cyan text-sm uppercase tracking-widest">Views</span>
+                    <span class="text-4xl font-display">Burj Khalifa</span>
+                </div>
+                <div
+                    class="bg-midnight p-8 flex flex-col justify-between aspect-square md:aspect-auto md:h-48 group hover:bg-graphite transition-colors">
+                    <span class="text-cyan text-sm uppercase tracking-widest">Ceilings</span>
+                    <span class="text-4xl font-display">4.2 Metres</span>
+                </div>
+            </div>
+
+            <div class="mt-24">
+                <h3 class="text-2xl font-display font-light mb-12">Key Amenities</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                    <div class="border border-silver/10 p-6 border-glow">Sky Infinity Pool</div>
+                    <div class="border border-silver/10 p-6 border-glow">Podium Pool</div>
+                    <div class="border border-silver/10 p-6 border-glow">High-Tech Gym</div>
+                    <div class="border border-silver/10 p-6 border-glow">Private Pool</div>
+                    <div class="border border-silver/10 p-6 border-glow">Luxury Spa</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 relative bg-pearl text-midnight">
+        <!-- plugin -->
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-sm uppercase tracking-[0.3em] text-midnight/50 mb-16">Experience</h2>
+        </div>
+        <div id="plugin" style="width: 100%; display: flex; justify-content: center;">
+            <iframe id="propdeck-iframe" src="https://interior-frontend-propdeck.vercel.app/"
+                title="AI Interior Design Generator"
+                style="width: 100%; max-width: 1240px; height: 700px; border: none; display: block;"></iframe>
+    </section>
+
+
+
+    <!-- Floorplans -->
+    <section id="floorplans" class=" relative bg-pearl text-midnight">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-sm uppercase tracking-[0.3em] text-midnight/50 mb-16">03 / Layouts</h2>
+
+            <div class="flex flex-col border-t border-midnight/20">
+
+                <div
+                    class="group flex flex-col md:flex-row justify-between items-start md:items-center py-8 border-b border-midnight/10 hover:border-cyan-600/50 transition-colors cursor-pointer">
+                    <div class="mb-4 md:mb-0">
+                        <h4 class="text-2xl font-display group-hover:text-cyan-600 transition-colors">2 Bedroom Suite
+                        </h4>
+                        <p class="text-midnight/60 text-sm mt-2">Abstracted technical layout</p>
+                    </div>
+                    <button
+                        class="uppercase text-xs tracking-widest border border-midnight/30 px-4 py-2 group-hover:bg-cyan-600 group-hover:text-white group-hover:border-cyan-600 transition-all">View
+                        Details</button>
+                </div>
+
+                <div
+                    class="group flex flex-col md:flex-row justify-between items-start md:items-center py-8 border-b border-midnight/10 hover:border-cyan-600/50 transition-colors cursor-pointer">
+                    <div class="mb-4 md:mb-0">
+                        <h4 class="text-2xl font-display group-hover:text-cyan-600 transition-colors">3 Bedroom Suite
+                        </h4>
+                        <p class="text-midnight/60 text-sm mt-2">Abstracted technical layout</p>
+                    </div>
+                    <button
+                        class="uppercase text-xs tracking-widest border border-midnight/30 px-4 py-2 group-hover:bg-cyan-600 group-hover:text-white group-hover:border-cyan-600 transition-all">View
+                        Details</button>
+                </div>
+
+                <div
+                    class="group flex flex-col md:flex-row justify-between items-start md:items-center py-8 border-b border-midnight/10 hover:border-cyan-600/50 transition-colors cursor-pointer">
+                    <div class="mb-4 md:mb-0">
+                        <h4 class="text-2xl font-display group-hover:text-cyan-600 transition-colors">4 Bedroom
+                            Penthouse</h4>
+                        <p class="text-midnight/60 text-sm mt-2">Exclusive collection</p>
+                    </div>
+                    <button
+                        class="uppercase text-xs tracking-widest border border-midnight/30 px-4 py-2 group-hover:bg-cyan-600 group-hover:text-white group-hover:border-cyan-600 transition-all">View
+                        Details</button>
+                </div>
+
+                <div
+                    class="group flex flex-col md:flex-row justify-between items-start md:items-center py-8 border-b border-midnight/10 hover:border-cyan-600/50 transition-colors cursor-pointer">
+                    <div class="mb-4 md:mb-0">
+                        <h4 class="text-2xl font-display group-hover:text-cyan-600 transition-colors">5 Bedroom
+                            Penthouse</h4>
+                        <p class="text-midnight/60 text-sm mt-2">Exclusive collection</p>
+                    </div>
+                    <button
+                        class="uppercase text-xs tracking-widest border border-midnight/30 px-4 py-2 group-hover:bg-cyan-600 group-hover:text-white group-hover:border-cyan-600 transition-all">View
+                        Details</button>
+                </div>
+
+                <div
+                    class="group flex flex-col md:flex-row justify-between items-start md:items-center py-8 border-b border-midnight/10 hover:border-cyan-600/50 transition-colors cursor-pointer">
+                    <div class="mb-4 md:mb-0">
+                        <h4 class="text-2xl font-display group-hover:text-cyan-600 transition-colors">6 Bedroom Duplex
+                            Penthouse</h4>
+                        <p class="text-midnight/60 text-sm mt-2">Inspired by iconic models</p>
+                    </div>
+                    <button
+                        class="uppercase text-xs tracking-widest border border-midnight/30 px-4 py-2 group-hover:bg-cyan-600 group-hover:text-white group-hover:border-cyan-600 transition-all">View
+                        Details</button>
+                </div>
+
+                <div
+                    class="group flex flex-col md:flex-row justify-between items-start md:items-center py-8 border-b border-midnight/10 hover:border-cyan-600/50 transition-colors cursor-pointer">
+                    <div class="mb-4 md:mb-0">
+                        <h4 class="text-2xl font-display group-hover:text-cyan-600 transition-colors">7 Bedroom Triplex
+                            Penthouse</h4>
+                        <p class="text-midnight/60 text-sm mt-2">The pinnacle of design</p>
+                    </div>
+                    <button
+                        class="uppercase text-xs tracking-widest border border-midnight/30 px-4 py-2 group-hover:bg-cyan-600 group-hover:text-white group-hover:border-cyan-600 transition-all">View
+                        Details</button>
+                </div>
+
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="#"
+                    class="inline-block border-b border-cyan-600 text-cyan-600 uppercase tracking-widest text-sm pb-1 hover:text-midnight hover:border-midnight transition-colors">Download
+                    Full Floor Plans</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Plan -->
+    <section id="payment" class="py-24 bg-graphite/50 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-sm uppercase tracking-[0.3em] text-silver/50 mb-16">04 / Financials</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h3 class="text-4xl font-display font-light mb-6">Structured for Investors.</h3>
+                    <p class="text-silver/70 leading-relaxed max-w-md mb-8">
+                        Off-plan is paid in stages, and how those stages fall is the difference between a plan that
+                        suits you and one that does not. 3 payments, ending at handover in Q4 2026.
+                    </p>
+                    <a href="#inquire"
+                        class="inline-block bg-pearl text-midnight px-8 py-3 uppercase tracking-widest text-sm font-medium hover:bg-cyan hover:text-midnight transition-colors">
+                        Request Full Schedule
+                    </a>
+                </div>
+
+                <div class="relative">
+                    <div class="flex items-end h-64 gap-2 pb-8 border-b border-silver/20 relative">
+                        <!-- Chart Bars -->
+                        <div class="w-1/3 bg-silver/20 hover:bg-cyan/80 transition-colors h-[20%] relative group">
+                            <div
+                                class="absolute -top-8 left-0 right-0 text-center text-sm font-display opacity-0 group-hover:opacity-100 transition-opacity">
+                                20%</div>
+                        </div>
+                        <div class="w-1/3 bg-silver/40 hover:bg-cyan/80 transition-colors h-[50%] relative group">
+                            <div
+                                class="absolute -top-8 left-0 right-0 text-center text-sm font-display opacity-0 group-hover:opacity-100 transition-opacity">
+                                50%</div>
+                        </div>
+                        <div class="w-1/3 bg-silver/80 hover:bg-cyan transition-colors h-[30%] relative group">
+                            <div
+                                class="absolute -top-8 left-0 right-0 text-center text-sm font-display text-cyan group-hover:text-pearl opacity-0 group-hover:opacity-100 transition-colors">
+                                30%</div>
+                        </div>
+                    </div>
+                    <div class="flex text-xs uppercase tracking-widest text-silver/50 mt-4">
+                        <div class="w-1/3 text-center">Booking</div>
+                        <div class="w-1/3 text-center">Construction</div>
+                        <div class="w-1/3 text-center text-pearl">Handover</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ & Inquire -->
+    <section id="inquire" class="py-32 relative bg-pearl text-midnight">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24">
+
+            <!-- FAQ -->
+            <div>
+                <h2 class="text-sm uppercase tracking-[0.3em] text-cyan-600 mb-12">05 / Intelligence</h2>
+
+                <div class="space-y-6">
+                    <div class="border-b border-midnight/10 pb-6">
+                        <h4 class="text-lg font-display mb-3">What types of units are available?</h4>
+                        <p class="text-midnight/70 text-sm leading-relaxed">The development offers luxury residences
+                            from 2- and 3-bedroom suites to exclusive 4-, 5-, 6-, and 7-bedroom penthouses, inspired by
+                            iconic Mercedes-Benz models.</p>
+                    </div>
+                    <div class="border-b border-midnight/10 pb-6">
+                        <h4 class="text-lg font-display mb-3">Is the property freehold?</h4>
+                        <p class="text-midnight/70 text-sm leading-relaxed">Yes, it is a freehold development, allowing
+                            both UAE nationals and international buyers full ownership rights.</p>
+                    </div>
+                    <div class="border-b border-midnight/10 pb-6">
+                        <h4 class="text-lg font-display mb-3">When is the expected handover?</h4>
+                        <p class="text-midnight/70 text-sm leading-relaxed">Handover for Mercedes-Benz Places by
+                            Binghatti is scheduled for Q4 2026.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div class="bg-white p-8 md:p-12 border border-midnight/10 shadow-xl shadow-midnight/5">
+                <h3 class="text-3xl font-display font-light mb-2">Secure your suite.</h3>
+                <p class="text-midnight/50 text-sm mb-10">Prices, payment plans and availability. A specialist will
+                    respond shortly.</p>
+
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-midnight/50 mb-2">Name</label>
+                        <input type="text"
+                            class="w-full bg-transparent border-b border-midnight/20 px-0 py-3 text-midnight focus:outline-none focus:border-cyan-600 transition-colors placeholder:text-midnight/20"
+                            placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-midnight/50 mb-2">Email</label>
+                        <input type="email"
+                            class="w-full bg-transparent border-b border-midnight/20 px-0 py-3 text-midnight focus:outline-none focus:border-cyan-600 transition-colors placeholder:text-midnight/20"
+                            placeholder="john@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-xs uppercase tracking-widest text-midnight/50 mb-2">Phone</label>
+                        <input type="tel"
+                            class="w-full bg-transparent border-b border-midnight/20 px-0 py-3 text-midnight focus:outline-none focus:border-cyan-600 transition-colors placeholder:text-midnight/20"
+                            placeholder="+971 50 123 4567">
+                    </div>
+                    <button type="button"
+                        class="w-full bg-midnight text-pearl py-4 uppercase tracking-widest text-sm font-medium hover:bg-cyan-600 hover:text-white transition-colors mt-8">
+                        Register Interest
+                    </button>
+                    <p class="text-[10px] text-midnight/40 text-center mt-4">By submitting this you agree to our Privacy
+                        Policy.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-silver/10 py-12 text-center text-silver/40 text-sm">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="font-display tracking-widest uppercase">Springfield Properties</div>
+            <div>&copy; 2026 Springfield Properties. All rights reserved. RERA-licensed, ORN 11929.</div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

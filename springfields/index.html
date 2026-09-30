@@ -1,430 +1,1495 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mercedes-Benz Places | Binghatti</title>
+    <title>Furnished |, Downtown Dubai, Dubai</title>
+    <meta name="description"
+        content="Spring Field Properties offers you this luxurious, designed residential apartment available for rent in Forte, located in the heart of the Opera District, Downtown Dubai.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://springfieldproperties.ae/for-sale/furnished-sp-s-6938/">
 
-    <!-- Google Fonts -->
+    <!-- Poppins – the actual font used on the site -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@200;300;400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* ===== RESET ===== */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        midnight: '#0A0A0A',
-                        graphite: '#171717',
-                        pearl: '#F8F9FA',
-                        silver: '#E2E8F0',
-                        cyan: '#00E5FF'
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Outfit', 'sans-serif'],
-                    },
-                    backgroundImage: {
-                        'hero-pattern': "url('https://media.springfieldproperties.ae/Mercedes_Benz_Places_by_Binghatti_at_Downtown_01_8bda65f2b1.webp')",
-                    }
-                }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #1a1a2e;
+            background: #fff;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        button {
+            cursor: pointer;
+            font-family: inherit;
+            border: none;
+            background: none;
+        }
+
+        /* ===== UTILITIES ===== */
+        .container {
+            width: 100%;
+            padding: 0 40px;
+        }
+
+        .is-visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: #fff;
+            border-bottom: 1px solid #e8e8e8;
+            transition: box-shadow .3s;
+        }
+
+        .header.scrolled {
+            box-shadow: 0 2px 12px rgba(0, 0, 0, .06);
+        }
+
+        .header-shell {
+            padding: 0;
+        }
+
+        .header-inner {
+            width: 100%;
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+
+        .header-brand {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo {
+            height: 28px;
+            width: auto;
+        }
+
+        /* Nav */
+        .nav-list {
+            display: flex;
+            gap: 0;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 24px 16px;
+            font-size: .8125rem;
+            font-weight: 500;
+            letter-spacing: .02em;
+            color: #1a1a2e;
+            transition: color .2s;
+        }
+
+        .nav-link:hover,
+        .nav-link.is-active {
+            color: #2d5bff;
+        }
+
+        /* Nav toggle (mobile) */
+        .nav-toggle {
+            display: none;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-burger,
+        .nav-burger::before,
+        .nav-burger::after {
+            display: block;
+            width: 20px;
+            height: 2px;
+            background: #1a1a2e;
+            border-radius: 1px;
+            transition: .25s;
+        }
+
+        .nav-burger {
+            position: relative;
+        }
+
+        .nav-burger::before,
+        .nav-burger::after {
+            content: '';
+            position: absolute;
+            left: 0;
+        }
+
+        .nav-burger::before {
+            top: -6px;
+        }
+
+        .nav-burger::after {
+            top: 6px;
+        }
+
+        /* ===== BREADCRUMB ===== */
+        .page-trail {
+            padding: 16px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            font-size: .75rem;
+            color: #888;
+        }
+
+        .breadcrumb-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .breadcrumb-mark {
+            margin: 0 8px;
+            color: #ccc;
+        }
+
+        .breadcrumb-link {
+            color: #888;
+            transition: color .2s;
+        }
+
+        .breadcrumb-link:hover {
+            color: #1a1a2e;
+        }
+
+        /* ===== GALLERY ===== */
+        .gallery-hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 220px 220px;
+            gap: 6px;
+            padding: 16px 0;
+        }
+
+        .gallery-tile {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #e9e9e9;
+        }
+
+        .gallery-tile:first-child {
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+        }
+
+        .gallery-tile img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .5s;
+        }
+
+        .gallery-tile:hover img {
+            transform: scale(1.03);
+        }
+
+        .gallery-more {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            background: #f5f5f5;
+        }
+
+        /* ===== BUTTONS (shared) ===== */
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 28px;
+            font-size: .875rem;
+            font-weight: 500;
+            border-radius: 6px;
+            transition: all .2s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .button-primary {
+            background: #1a1a2e;
+            color: #fff;
+        }
+
+        .button-primary:hover {
+            background: #2d2d44;
+        }
+
+        .button-paper {
+            background: #fff;
+            color: #1a1a2e;
+            border: 1px solid #d4d4d4;
+        }
+
+        .button-paper:hover {
+            border-color: #1a1a2e;
+        }
+
+        .button-ghost {
+            background: transparent;
+            color: #fff;
+            border: 1px solid rgba(255, 255, 255, .4);
+        }
+
+        .button-ghost:hover {
+            border-color: #fff;
+            background: rgba(255, 255, 255, .08);
+        }
+
+        /* ===== LISTING LEAD ===== */
+        .section {
+            padding: 48px 0;
+        }
+
+        .split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .listing-headline-price {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+
+        .listing-heading {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #1a1a2e;
+        }
+
+        .listing-where {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: .875rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .fact-icon {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        .section-action {
+            margin-top: 20px;
+        }
+
+        .section-action .button+.button {
+            margin-left: 12px;
+        }
+
+        /* Stats row */
+        .stat-list-inline {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+
+        .stat-list-inline>div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-value {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        .stat-label {
+            font-size: .75rem;
+            color: #888;
+            text-transform: capitalize;
+        }
+
+        .listing-more {
+            margin-top: 16px;
+        }
+
+        .listing-more a {
+            font-size: .8125rem;
+            color: #2d5bff;
+            font-weight: 500;
+        }
+
+        .listing-more a:hover {
+            text-decoration: underline;
+        }
+
+        .listing-description {
+            font-size: .9375rem;
+            color: #444;
+            margin-top: 20px;
+            line-height: 1.8;
+            white-space: pre-line;
+        }
+
+        /* Read more toggle */
+        .listing-readmore {
+            margin-top: 4px;
+        }
+
+        .listing-readmore summary {
+            cursor: pointer;
+            font-size: .875rem;
+            font-weight: 500;
+            color: #2d5bff;
+            list-style: none;
+        }
+
+        .listing-readmore summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .listing-readmore-open {
+            display: none;
+        }
+
+        .listing-readmore[open] .listing-readmore-shut {
+            display: none;
+        }
+
+        .listing-readmore[open] .listing-readmore-open {
+            display: inline;
+        }
+
+        /* ===== SPECIFICATIONS ===== */
+        .section-heading-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #1a1a2e;
+        }
+
+        .facts-rows {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .facts-rows>div {
+            display: flex;
+            justify-content: space-between;
+            padding: 14px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .facts-rows>div:nth-child(odd) {
+            padding-right: 32px;
+        }
+
+        .facts-rows>div:nth-child(even) {
+            padding-left: 32px;
+            border-left: 1px solid #f0f0f0;
+        }
+
+        .facts-rows dt {
+            font-size: .875rem;
+            color: #888;
+        }
+
+        .facts-rows dd {
+            font-size: .875rem;
+            font-weight: 500;
+            color: #1a1a2e;
+            text-transform: capitalize;
+        }
+
+        /* ===== AMENITIES ===== */
+        .amenity-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .amenity {
+            padding: 8px 18px;
+            background: #f5f5f5;
+            border-radius: 100px;
+            font-size: .8125rem;
+            color: #444;
+            text-transform: capitalize;
+        }
+
+        /* ===== LOCATION ===== */
+        .location-address {
+            font-size: .9375rem;
+            color: #444;
+            margin-bottom: 16px;
+        }
+
+        /* ===== ENQUIRY BAND ===== */
+        .theme-ink {
+            background: #1a1a2e;
+            color: #fff;
+        }
+
+        .enquiry-band {
+            align-items: start;
+        }
+
+        .enquiry-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .enquiry-note {
+            font-size: .875rem;
+            color: rgba(255, 255, 255, .7);
+            margin-bottom: 24px;
+        }
+
+        .theme-paper {
+            background: #fff;
+            color: #1a1a2e;
+            border-radius: 10px;
+            padding: 32px;
+        }
+
+        .field {
+            margin-bottom: 16px;
+        }
+
+        .field-pair {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .field-label {
+            display: block;
+            font-size: .8125rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: #1a1a2e;
+        }
+
+        .field-required {
+            color: #e74c3c;
+            margin-left: 2px;
+        }
+
+        .field-input {
+            width: 100%;
+            padding: 10px 14px;
+            border: 1px solid #d4d4d4;
+            border-radius: 6px;
+            font-size: .875rem;
+            font-family: inherit;
+            transition: border-color .2s;
+        }
+
+        .field-input:focus {
+            outline: none;
+            border-color: #2d5bff;
+        }
+
+        textarea.field-input {
+            resize: vertical;
+        }
+
+        .field-phone {
+            display: flex;
+            gap: 8px;
+        }
+
+        .field-phone-country {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            width: auto;
+            min-width: 90px;
+            padding: 10px 12px;
+            position: relative;
+        }
+
+        .field-phone-dial {
+            font-size: .8125rem;
+            font-weight: 500;
+        }
+
+        .field-phone-select {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            cursor: pointer;
+            font-size: .875rem;
+        }
+
+        .enquiry-consent {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            margin-bottom: 20px;
+            font-size: .8125rem;
+            color: #666;
+        }
+
+        .enquiry-consent-box {
+            margin-top: 3px;
+        }
+
+        .enquiry-terms {
+            margin-top: 12px;
+            font-size: .75rem;
+            color: #888;
+        }
+
+        .enquiry-terms a {
+            color: #2d5bff;
+        }
+
+        /* ===== PERMIT ===== */
+        .project-permit {
+            text-align: center;
+            font-size: .8125rem;
+            color: #888;
+            padding: 24px 0;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #1a1a2e;
+            color: #fff;
+        }
+
+        .footer-top {
+            padding: 56px 0 40px;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+        }
+
+        .footer-ask-title {
+            font-size: 1.75rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        /* Subscribe form */
+        .subscribe {
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .subscribe-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .subscribe-field {
+            flex: 1;
+            margin-bottom: 0;
+        }
+
+        .subscribe-note {
+            text-align: center;
+            font-size: .75rem;
+            color: rgba(255, 255, 255, .5);
+        }
+
+        .subscribe-note a {
+            color: rgba(255, 255, 255, .7);
+        }
+
+        /* Footer brand */
+        .footer-brand-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, .1);
+        }
+
+        .footer-logo {
+            height: 24px;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-proof {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .footer-score {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .google-mark {
+            width: 20px;
+            height: 20px;
+        }
+
+        .stars {
+            display: flex;
+            gap: 2px;
+        }
+
+        .star {
+            width: 16px;
+            height: 16px;
+            color: #f5b731;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-link {
+            display: flex;
+            width: 36px;
+            height: 36px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .08);
+            color: rgba(255, 255, 255, .7);
+            transition: all .2s;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, .15);
+            color: #fff;
+        }
+
+        .social-icon {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Footer nav */
+        .footer-inner {
+            padding: 40px 0;
+        }
+
+        .footer-nav {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 32px;
+        }
+
+        .footer-heading {
+            font-size: .75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            color: rgba(255, 255, 255, .4);
+            margin-bottom: 16px;
+        }
+
+        .footer-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-link {
+            font-size: .8125rem;
+            color: rgba(255, 255, 255, .7);
+            transition: color .2s;
+        }
+
+        .footer-link:hover {
+            color: #fff;
+        }
+
+        .footer-office {
+            display: block;
+            font-weight: 500;
+            color: rgba(255, 255, 255, .9);
+            margin-bottom: 4px;
+            font-size: .8125rem;
+        }
+
+        /* Footer legal */
+        .footer-legal {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0;
+            border-top: 1px solid rgba(255, 255, 255, .1);
+            font-size: .75rem;
+            color: rgba(255, 255, 255, .4);
+        }
+
+        .footer-note {
+            color: rgba(255, 255, 255, .25);
+        }
+
+        .footer-legal ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        /* ===== WHATSAPP FLOAT ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            width: 56px;
+            height: 56px;
+            background: #25d366;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, .35);
+            z-index: 90;
+            transition: transform .2s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+        }
+
+        .whatsapp-float svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .split {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .gallery-hero {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 260px 180px;
+            }
+
+            .gallery-tile:first-child {
+                grid-column: 1 / 3;
+            }
+
+            .facts-rows {
+                grid-template-columns: 1fr;
+            }
+
+            .facts-rows>div:nth-child(even) {
+                padding-left: 0;
+                border-left: none;
+            }
+
+            .footer-nav {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-brand-section {
+                flex-direction: column;
+                gap: 24px;
             }
         }
-    </script>
-    <style>
-        body {
-            background-color: #0A0A0A;
-            color: #F8F9FA;
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        .font-display {
-            font-family: 'Outfit', sans-serif;
-        }
+        @media (max-width: 640px) {
+            .nav-list {
+                display: none;
+            }
 
-        .text-glow:hover {
-            text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
-            color: #00E5FF;
-            transition: all 0.3s ease;
-        }
+            .nav-toggle {
+                display: flex;
+            }
 
-        .border-glow:hover {
-            border-color: #00E5FF;
-            box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
-            transition: all 0.3s ease;
-        }
+            .gallery-hero {
+                grid-template-columns: 1fr;
+                grid-template-rows: 280px;
+            }
 
-        /* Abstract structural dividers */
-        .hairline {
-            height: 1px;
-            background: linear-gradient(90deg, rgba(226, 232, 240, 0) 0%, rgba(226, 232, 240, 0.2) 50%, rgba(226, 232, 240, 0) 100%);
+            .gallery-tile:not(:first-child) {
+                display: none;
+            }
+
+            .gallery-more {
+                display: none;
+            }
+
+            .gallery-tile:first-child {
+                grid-column: 1;
+            }
+
+            .field-pair {
+                grid-template-columns: 1fr;
+            }
+
+            .subscribe-row {
+                flex-direction: column;
+            }
+
+            .footer-nav {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-legal {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
         }
     </style>
 </head>
 
-<body class="selection:bg-silver selection:text-midnight">
+<body>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 top-0 border-b border-silver/10 bg-midnight/80 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="text-xl tracking-[0.2em] font-display uppercase text-pearl">
-                Mercedes-Benz <span class="text-silver/50">Places</span>
-            </div>
-            <div class="hidden md:flex gap-8 text-sm uppercase tracking-widest text-silver">
-                <a href="#vision" class="hover:text-cyan transition-colors duration-300">Vision</a>
-                <a href="#specs" class="hover:text-cyan transition-colors duration-300">Specs</a>
-                <a href="#floorplans" class="hover:text-cyan transition-colors duration-300">Floorplans</a>
-                <a href="#payment" class="hover:text-cyan transition-colors duration-300">Payment</a>
-            </div>
-            <a href="#inquire"
-                class="border border-silver/20 px-6 py-2 text-sm uppercase tracking-widest hover:bg-silver hover:text-midnight transition-colors duration-300">
-                Inquire
-            </a>
-        </div>
-    </nav>
+    <!-- Skip Link -->
+    <a class="is-visually-hidden" href="#main"
+        style="position:absolute;top:0;left:0;padding:8px;background:#fff;z-index:200;">Skip to content</a>
 
-    <!-- Hero Section -->
-    <header class="relative h-screen w-full flex items-end justify-center pb-24 overflow-hidden">
-        <!-- Background Image with Overlay -->
-        <div class="absolute inset-0 z-0">
-            <div
-                class="absolute inset-0 bg-hero-pattern bg-cover bg-center scale-105 animate-[pulse_20s_ease-in-out_infinite_alternate]">
-            </div>
-            <div class="absolute inset-0 bg-gradient-to-t from-midnight via-midnight/80 to-transparent"></div>
-            <div class="absolute inset-0 bg-black/40"></div>
-        </div>
-
-        <div
-            class="relative z-10 w-full max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-end gap-8">
-            <div class="max-w-3xl">
-                <h1
-                    class="text-5xl md:text-7xl lg:text-8xl font-display font-light uppercase tracking-tighter leading-[0.9] text-pearl mb-6">
-                    A Visionary <br>
-                    <span class="text-silver/60">Collaboration.</span>
-                </h1>
-                <p class="text-lg md:text-xl text-silver/80 font-light max-w-xl leading-relaxed">
-                    Off-plan 2 to 7-bedroom penthouses by Binghatti Properties in Downtown Dubai. Design, scale, and
-                    privacy unmatched.
-                </p>
-            </div>
-
-            <!-- Data Bar -->
-            <div
-                class="flex flex-col gap-6 md:text-right border-l md:border-l-0 md:border-r border-cyan/30 pl-6 md:pr-6 md:pl-0 shrink-0">
-                <div>
-                    <div class="text-xs uppercase tracking-[0.2em] text-silver/50 mb-1">Starting Price</div>
-                    <div class="text-2xl font-display text-pearl">AED 8,800,000</div>
-                </div>
-                <div>
-                    <div class="text-xs uppercase tracking-[0.2em] text-silver/50 mb-1">Handover</div>
-                    <div class="text-2xl font-display text-pearl">Q4 2026</div>
-                </div>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="header-shell">
+            <div class="header-inner">
+                <a class="header-brand" href="/" aria-label="Springfield Properties, home">
+                    <img class="header-logo" alt="Springfield Properties"
+                        src="https://springfieldproperties.ae/_next/static/immutable/media/springfield-logo-navy.1n9v8as0_g-c5.svg">
+                </a>
+                <button type="button" class="nav-toggle" aria-expanded="false" aria-label="Open menu">
+                    <span class="nav-burger" aria-hidden="true"></span>
+                </button>
+                <nav aria-label="Primary">
+                    <ul class="nav-list">
+                        <li class="nav-item"><a class="nav-link is-active" href="/for-sale/">Buy</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/sell/">Sell</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/for-rent/">Rent</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/projects/">Off-plan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/areas/">Communities</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/developer/">Developers</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about-us/">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/contact-us/">Contact</a></li>
+                    </ul>
+                </nav>
             </div>
         </div>
     </header>
 
-    <div class="hairline w-full"></div>
+    <!-- MAIN -->
+    <main id="main">
 
-    <!-- The Vision -->
-    <section id="vision" class="py-32 relative bg-pearl text-midnight">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-32">
-            <div>
-                <h2 class="text-sm uppercase tracking-[0.3em] text-cyan-600 mb-8">01 / The Concept</h2>
-                <h3 class="text-3xl md:text-5xl font-display font-light leading-tight mb-8">
-                    An architectural marvel inspired by automotive perfection.
-                </h3>
-            </div>
-            <div class="flex flex-col justify-center">
-                <p class="text-midnight/70 leading-relaxed mb-8">
-                    Each home is elevated by slab-to-slab ceiling heights of 4.2 metres, panoramic views of Burj Khalifa
-                    and Dubai Canal, and bespoke interiors that balance sophistication and serenity.
-                </p>
-                <p class="text-midnight/70 leading-relaxed">
-                    Buyers can choose between furnished and unfurnished layouts, while every penthouse includes private
-                    parking and direct access to exclusive lifestyle amenities.
-                </p>
+        <!-- Breadcrumb -->
+        <div class="page-trail">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <span class="breadcrumb-item"><a class="breadcrumb-link" href="/">Home</a></span>
+                    <span class="breadcrumb-item"><span class="breadcrumb-mark" aria-hidden="true">/</span><a
+                            class="breadcrumb-link" href="/for-sale/">For sale</a></span>
+                    <span class="breadcrumb-item"><span class="breadcrumb-mark" aria-hidden="true">/</span><span
+                            aria-current="page">Furnished |</span></span>
+                </nav>
             </div>
         </div>
-    </section>
 
-    <!-- Specifications / Facts -->
-    <section id="specs" class="py-24 bg-graphite/30 border-y border-silver/10 relative">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-sm uppercase tracking-[0.3em] text-silver/50 mb-16">02 / Specifications</h2>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-silver/10">
-                <div
-                    class="bg-midnight p-8 flex flex-col justify-between aspect-square md:aspect-auto md:h-48 group hover:bg-graphite transition-colors">
-                    <span class="text-cyan text-sm uppercase tracking-widest">Scale</span>
-                    <span class="text-4xl font-display">65 Floors</span>
-                </div>
-                <div
-                    class="bg-midnight p-8 flex flex-col justify-between aspect-square md:aspect-auto md:h-48 group hover:bg-graphite transition-colors">
-                    <span class="text-cyan text-sm uppercase tracking-widest">Exclusivity</span>
-                    <span class="text-4xl font-display">150 Suites</span>
-                </div>
-                <div
-                    class="bg-midnight p-8 flex flex-col justify-between aspect-square md:aspect-auto md:h-48 group hover:bg-graphite transition-colors">
-                    <span class="text-cyan text-sm uppercase tracking-widest">Views</span>
-                    <span class="text-4xl font-display">Burj Khalifa</span>
-                </div>
-                <div
-                    class="bg-midnight p-8 flex flex-col justify-between aspect-square md:aspect-auto md:h-48 group hover:bg-graphite transition-colors">
-                    <span class="text-cyan text-sm uppercase tracking-widest">Ceilings</span>
-                    <span class="text-4xl font-display">4.2 Metres</span>
-                </div>
+        <!-- Gallery -->
+        <section class="section" style="padding-top:0;padding-bottom:0;" aria-label="Photographs">
+            <div class="container">
+                <ul class="gallery-hero">
+                    <li class="gallery-tile">
+                        <img alt="Living room"
+                            src="https://property-listing-uploads.s3.ap-south-1.amazonaws.com/springfield/6a96c07028ccd_1788264560.png">
+                    </li>
+                    <li class="gallery-tile">
+                        <img alt="View"
+                            src="https://property-listing-uploads.s3.ap-south-1.amazonaws.com/springfield/6a96c07193ec5_1788264561.png">
+                    </li>
+                    <li class="gallery-tile">
+                        <img alt="Bedroom"
+                            src="https://property-listing-uploads.s3.ap-south-1.amazonaws.com/springfield/6a96c072c0549_1788264562.png">
+                    </li>
+                    <li class="gallery-tile">
+                        <img alt="Kitchen"
+                            src="https://property-listing-uploads.s3.ap-south-1.amazonaws.com/springfield/6a96c073d5a3c_1788264563.png">
+                    </li>
+                    <li class="gallery-more">
+                        <button class="button button-paper" type="button" id="gallery-btn">All 33 photos</button>
+                    </li>
+                </ul>
             </div>
+        </section>
 
-            <div class="mt-24">
-                <h3 class="text-2xl font-display font-light mb-12">Key Amenities</h3>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-                    <div class="border border-silver/10 p-6 border-glow">Sky Infinity Pool</div>
-                    <div class="border border-silver/10 p-6 border-glow">Podium Pool</div>
-                    <div class="border border-silver/10 p-6 border-glow">High-Tech Gym</div>
-                    <div class="border border-silver/10 p-6 border-glow">Private Pool</div>
-                    <div class="border border-silver/10 p-6 border-glow">Luxury Spa</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 relative bg-pearl text-midnight">
         <!-- plugin -->
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-sm uppercase tracking-[0.3em] text-midnight/50 mb-16">Experience</h2>
-        </div>
-        <div id="plugin" style="width: 100%; display: flex; justify-content: center;">
+
+        <div id="plugin" style="width: 100%; display: flex; justify-content: center; margin-top: 50px;">
             <iframe id="propdeck-iframe" src="https://interior-frontend-propdeck.vercel.app/"
                 title="AI Interior Design Generator"
                 style="width: 100%; max-width: 1240px; height: 700px; border: none; display: block;"></iframe>
-    </section>
 
-
-
-    <!-- Floorplans -->
-    <section id="floorplans" class=" relative bg-pearl text-midnight">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-sm uppercase tracking-[0.3em] text-midnight/50 mb-16">03 / Layouts</h2>
-
-            <div class="flex flex-col border-t border-midnight/20">
-
-                <div
-                    class="group flex flex-col md:flex-row justify-between items-start md:items-center py-8 border-b border-midnight/10 hover:border-cyan-600/50 transition-colors cursor-pointer">
-                    <div class="mb-4 md:mb-0">
-                        <h4 class="text-2xl font-display group-hover:text-cyan-600 transition-colors">2 Bedroom Suite
-                        </h4>
-                        <p class="text-midnight/60 text-sm mt-2">Abstracted technical layout</p>
-                    </div>
-                    <button
-                        class="uppercase text-xs tracking-widest border border-midnight/30 px-4 py-2 group-hover:bg-cyan-600 group-hover:text-white group-hover:border-cyan-600 transition-all">View
-                        Details</button>
-                </div>
-
-                <div
-                    class="group flex flex-col md:flex-row justify-between items-start md:items-center py-8 border-b border-midnight/10 hover:border-cyan-600/50 transition-colors cursor-pointer">
-                    <div class="mb-4 md:mb-0">
-                        <h4 class="text-2xl font-display group-hover:text-cyan-600 transition-colors">3 Bedroom Suite
-                        </h4>
-                        <p class="text-midnight/60 text-sm mt-2">Abstracted technical layout</p>
-                    </div>
-                    <button
-                        class="uppercase text-xs tracking-widest border border-midnight/30 px-4 py-2 group-hover:bg-cyan-600 group-hover:text-white group-hover:border-cyan-600 transition-all">View
-                        Details</button>
-                </div>
-
-                <div
-                    class="group flex flex-col md:flex-row justify-between items-start md:items-center py-8 border-b border-midnight/10 hover:border-cyan-600/50 transition-colors cursor-pointer">
-                    <div class="mb-4 md:mb-0">
-                        <h4 class="text-2xl font-display group-hover:text-cyan-600 transition-colors">4 Bedroom
-                            Penthouse</h4>
-                        <p class="text-midnight/60 text-sm mt-2">Exclusive collection</p>
-                    </div>
-                    <button
-                        class="uppercase text-xs tracking-widest border border-midnight/30 px-4 py-2 group-hover:bg-cyan-600 group-hover:text-white group-hover:border-cyan-600 transition-all">View
-                        Details</button>
-                </div>
-
-                <div
-                    class="group flex flex-col md:flex-row justify-between items-start md:items-center py-8 border-b border-midnight/10 hover:border-cyan-600/50 transition-colors cursor-pointer">
-                    <div class="mb-4 md:mb-0">
-                        <h4 class="text-2xl font-display group-hover:text-cyan-600 transition-colors">5 Bedroom
-                            Penthouse</h4>
-                        <p class="text-midnight/60 text-sm mt-2">Exclusive collection</p>
-                    </div>
-                    <button
-                        class="uppercase text-xs tracking-widest border border-midnight/30 px-4 py-2 group-hover:bg-cyan-600 group-hover:text-white group-hover:border-cyan-600 transition-all">View
-                        Details</button>
-                </div>
-
-                <div
-                    class="group flex flex-col md:flex-row justify-between items-start md:items-center py-8 border-b border-midnight/10 hover:border-cyan-600/50 transition-colors cursor-pointer">
-                    <div class="mb-4 md:mb-0">
-                        <h4 class="text-2xl font-display group-hover:text-cyan-600 transition-colors">6 Bedroom Duplex
-                            Penthouse</h4>
-                        <p class="text-midnight/60 text-sm mt-2">Inspired by iconic models</p>
-                    </div>
-                    <button
-                        class="uppercase text-xs tracking-widest border border-midnight/30 px-4 py-2 group-hover:bg-cyan-600 group-hover:text-white group-hover:border-cyan-600 transition-all">View
-                        Details</button>
-                </div>
-
-                <div
-                    class="group flex flex-col md:flex-row justify-between items-start md:items-center py-8 border-b border-midnight/10 hover:border-cyan-600/50 transition-colors cursor-pointer">
-                    <div class="mb-4 md:mb-0">
-                        <h4 class="text-2xl font-display group-hover:text-cyan-600 transition-colors">7 Bedroom Triplex
-                            Penthouse</h4>
-                        <p class="text-midnight/60 text-sm mt-2">The pinnacle of design</p>
-                    </div>
-                    <button
-                        class="uppercase text-xs tracking-widest border border-midnight/30 px-4 py-2 group-hover:bg-cyan-600 group-hover:text-white group-hover:border-cyan-600 transition-all">View
-                        Details</button>
-                </div>
-
-            </div>
-
-            <div class="mt-12 text-center">
-                <a href="#"
-                    class="inline-block border-b border-cyan-600 text-cyan-600 uppercase tracking-widest text-sm pb-1 hover:text-midnight hover:border-midnight transition-colors">Download
-                    Full Floor Plans</a>
-            </div>
         </div>
-    </section>
 
-    <!-- Payment Plan -->
-    <section id="payment" class="py-24 bg-graphite/50 relative">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-sm uppercase tracking-[0.3em] text-silver/50 mb-16">04 / Financials</h2>
+        <!-- Listing Lead -->
+        <section class="section">
+            <div class="container">
+                <div class="split listing-lead">
+                    <div>
+                        <p class="listing-headline-price">AED 5,200,000</p>
+                        <h1 class="listing-heading">Furnished |</h1>
+                        <p class="listing-where">
+                            <svg class="fact-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M10 17.5s6-5.4 6-9.5a6 6 0 0 0-12 0c0 4.1 6 9.5 6 9.5Z"></path>
+                                <circle cx="10" cy="8" r="2.1"></circle>
+                            </svg>
+                            Forte 2, Forte, Downtown Dubai, Dubai
+                        </p>
+                        <p class="section-action">
+                            <a class="button button-primary" href="#enquire">Enquire about this property</a>
+                        </p>
+                    </div>
+                    <div>
+                        <dl class="stat-list-inline listing-specs">
+                            <div>
+                                <dd class="stat-value">
+                                    <svg class="fact-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M3 15.5V5m0 5.5h11.5a2.5 2.5 0 0 1 2.5 2.5v2.5M6 10.5V8h4.5v2.5">
+                                        </path>
+                                    </svg>
+                                    3
+                                </dd>
+                                <dt class="stat-label">Bedrooms</dt>
+                            </div>
+                            <div>
+                                <dd class="stat-value">
+                                    <svg class="fact-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path
+                                            d="M2.5 10.5h15v1.5a4 4 0 0 1-4 4h-7a4 4 0 0 1-4-4zM5.5 10.5V5.75A1.75 1.75 0 0 1 9 5.75">
+                                        </path>
+                                    </svg>
+                                    4
+                                </dd>
+                                <dt class="stat-label">Bathrooms</dt>
+                            </div>
+                            <div>
+                                <dd class="stat-value">
+                                    <svg class="fact-icon" viewBox="0 0 20 20" fill="none" stroke="currentColor"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M7 3.5H3.5V7M13 3.5h3.5V7M16.5 13v3.5H13M7 16.5H3.5V13"></path>
+                                    </svg>
+                                    1,641
+                                </dd>
+                                <dt class="stat-label">Sq ft</dt>
+                            </div>
+                        </dl>
+                        <p class="listing-more"><a href="#specs">All specifications</a></p>
+                        <p class="listing-description">Spring Field Properties offers you this luxurious, designed
+                            residential apartment available for rent in Forte, located in the heart of the Opera
+                            District, Downtown Dubai.</p>
+                        <details class="listing-readmore">
+                            <summary>
+                                <span class="listing-readmore-shut">Read more</span>
+                                <span class="listing-readmore-open">Read less</span>
+                            </summary>
+                            <p class="listing-description">Property Details:
+                                • Readily available.
+                                • Fully furnished
+                                • 3 Bedrooms
+                                • Maid's Room.
+                                • 4 Bathrooms.
+                                • Balcony.
+                                • Semi-Open Kitchen
+                                • Spacious Living and Dining Areas.
+                                • Allocated Parking.
 
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                <div>
-                    <h3 class="text-4xl font-display font-light mb-6">Structured for Investors.</h3>
-                    <p class="text-silver/70 leading-relaxed max-w-md mb-8">
-                        Off-plan is paid in stages, and how those stages fall is the difference between a plan that
-                        suits you and one that does not. 3 payments, ending at handover in Q4 2026.
+                                Amenities for residents:
+                                • Swimming Pool
+                                • Kids' Playground
+                                • Fully-Equipped Gym.
+
+                                Minutes away from these key areas:
+                                • Burj Khalifa and Dubai Mall.
+                                • Business Districts.
+                                • Dubai Opera District.
+                                • Sheikh Mohamed bin Rashid Boulevard.
+                                • Safa Park and Zabeel Park.
+
+                                Set in a vibrant cultural and lifestyle hub, Forte offers elegant design, world-class
+                                amenities, and unrivaled proximity to Dubai's most iconic landmarks.
+
+                                Spring Field Properties LLC SOC provides a diverse range of properties for both sale and
+                                rent, including Apartments, Villas, Plots and Townhouses.
+
+                                For more information, you may call our specialist today.
+
+                                SPRING FIELD PROPERTIES
+                                RERA ORN: 11929</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Specifications -->
+        <section class="section" id="specs" aria-labelledby="specs-h" style="padding-top:0;">
+            <div class="container">
+                <h2 class="section-heading-title" id="specs-h">Specifications</h2>
+                <dl class="facts-rows listing-facts-table">
+                    <div>
+                        <dt>Type</dt>
+                        <dd>Apartment</dd>
+                    </div>
+                    <div>
+                        <dt>Bedrooms</dt>
+                        <dd>3</dd>
+                    </div>
+                    <div>
+                        <dt>Bathrooms</dt>
+                        <dd>4</dd>
+                    </div>
+                    <div>
+                        <dt>Size</dt>
+                        <dd>1,641 sq ft</dd>
+                    </div>
+                    <div>
+                        <dt>Furnishing</dt>
+                        <dd>Furnished</dd>
+                    </div>
+                    <div>
+                        <dt>Reference</dt>
+                        <dd>SP-S-6938</dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
+
+        <!-- Amenities -->
+        <section class="section" aria-labelledby="amenities-h" style="padding-top:0;">
+            <div class="container">
+                <h2 class="section-heading-title" id="amenities-h">Amenities</h2>
+                <ul class="amenity-list">
+                    <li class="amenity">balcony</li>
+                    <li class="amenity">built in wardrobes</li>
+                    <li class="amenity">central ac</li>
+                    <li class="amenity">childrens play area</li>
+                    <li class="amenity">kitchen appliances</li>
+                    <li class="amenity">covered parking</li>
+                    <li class="amenity">lobby in building</li>
+                    <li class="amenity">maids room</li>
+                    <li class="amenity">security</li>
+                    <li class="amenity">shared gym</li>
+                    <li class="amenity">shared pool</li>
+                    <li class="amenity">shared spa</li>
+                    <li class="amenity">view of landmark</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Location -->
+        <section class="section" aria-labelledby="where-h" style="padding-top:0;">
+            <div class="container">
+                <h2 class="section-heading-title" id="where-h">Location</h2>
+                <p class="location-address">Forte 2, Forte, Downtown Dubai, Dubai</p>
+                <p class="section-action">
+                    <a class="button button-paper" href="https://www.google.com/maps/search/?api=1&query=25.2,55.27"
+                        target="_blank" rel="noopener noreferrer">Open in Maps</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- Enquiry Band -->
+        <section class="section theme-ink" id="enquire" aria-labelledby="enquire-h">
+            <div class="container">
+                <div class="split enquiry-band">
+                    <div>
+                        <h2 class="enquiry-title" id="enquire-h">Arrange a viewing, or just ask</h2>
+                        <p class="enquiry-note">Farooq Syed is the agent on this property.</p>
+                        <p class="section-action">
+                            <a class="button button-ghost" href="tel:+971506319606">Call us</a>
+                            <a class="button button-ghost"
+                                href="https://wa.me/971506319606?text=Hi%20Springfield%20Properties%2C%20I%20have%20a%20question%20about%20Furnished%20%7C%20(ref%20SP-S-6938)."
+                                target="_blank" rel="noopener noreferrer">WhatsApp us</a>
+                        </p>
+                    </div>
+                    <form class="enquiry-form theme-paper" id="enquiry-form">
+                        <div class="field-pair">
+                            <p class="field">
+                                <label class="field-label" for="enquiry-name">Name<span class="field-required"
+                                        aria-hidden="true">*</span></label>
+                                <input class="field-input" id="enquiry-name" placeholder="Your name" autocomplete="name"
+                                    required name="name">
+                            </p>
+                            <p class="field">
+                                <label class="field-label" for="enquiry-email">Email<span class="field-required"
+                                        aria-hidden="true">*</span></label>
+                                <input class="field-input" id="enquiry-email" type="email" placeholder="you@example.com"
+                                    autocomplete="email" required name="email">
+                            </p>
+                        </div>
+                        <p class="field">
+                            <label class="field-label" for="enquiry-phone">Phone<span class="field-required"
+                                    aria-hidden="true">*</span></label>
+                            <span class="field-phone">
+                                <span class="field-input field-phone-country">
+                                    <span class="field-phone-dial">+971</span>
+                                    <select class="field-phone-select" name="phoneCountry" aria-label="Country code"
+                                        id="phone-country">
+                                        <option value="AE" selected>+971 United Arab Emirates</option>
+                                        <option value="US">+1 United States</option>
+                                        <option value="GB">+44 United Kingdom</option>
+                                        <option value="IN">+91 India</option>
+                                        <option value="SA">+966 Saudi Arabia</option>
+                                        <option value="PK">+92 Pakistan</option>
+                                    </select>
+                                </span>
+                                <input class="field-input" id="enquiry-phone" type="tel" inputmode="tel"
+                                    autocomplete="tel-national" placeholder="50 123 4567" required name="phone">
+                            </span>
+                        </p>
+                        <p class="field">
+                            <label class="field-label" for="enquiry-message">Anything you want to ask?</label>
+                            <textarea class="field-input" id="enquiry-message" name="message"
+                                placeholder="Floor plans, payment plan, availability..." rows="3"></textarea>
+                        </p>
+                        <p class="enquiry-consent">
+                            <input class="enquiry-consent-box" id="enquiry-consent" type="checkbox"
+                                name="marketingConsent">
+                            <label for="enquiry-consent">Send me launches, offers and market updates. Unsubscribe any
+                                time.</label>
+                        </p>
+                        <button type="submit" class="button button-primary" style="width:100%;">Ask about this
+                            property</button>
+                        <p class="enquiry-terms">By submitting this you agree to our <a href="/privacy-policy/">Privacy
+                                Policy</a>.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Permit -->
+        <section class="section" aria-label="Permit" style="padding:0;">
+            <div class="container project-permit">
+                <p>DLD permit number 71185319190 · Title deed draft</p>
+            </div>
+        </section>
+
+        <!-- Back link -->
+        <section class="section" style="padding-top:16px;">
+            <div class="container">
+                <p class="section-action" style="text-align:center;">
+                    <a class="button button-paper" href="/for-sale/">Every property for sale</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer theme-ink">
+        <!-- Newsletter -->
+        <div class="footer-top container">
+            <h2 class="footer-ask-title">What actually sold, once a month.</h2>
+            <form class="subscribe" id="subscribe-form">
+                <div class="subscribe-row">
+                    <p class="field subscribe-field">
+                        <label class="is-visually-hidden" for="sub-name">Name</label>
+                        <input id="sub-name" class="field-input" autocomplete="name" placeholder="Your name" required
+                            name="name">
                     </p>
-                    <a href="#inquire"
-                        class="inline-block bg-pearl text-midnight px-8 py-3 uppercase tracking-widest text-sm font-medium hover:bg-cyan hover:text-midnight transition-colors">
-                        Request Full Schedule
+                    <p class="field subscribe-field">
+                        <label class="is-visually-hidden" for="sub-email">Email</label>
+                        <input id="sub-email" type="email" class="field-input" autocomplete="email"
+                            placeholder="you@example.com" required name="email">
+                    </p>
+                    <button class="button button-primary" type="submit">Subscribe</button>
+                </div>
+                <p class="subscribe-note">One email a month. Unsubscribe any time. See our <a
+                        href="/privacy-policy/">privacy policy</a>.</p>
+            </form>
+        </div>
+
+        <!-- Brand & Social -->
+        <div class="container">
+            <div class="footer-brand-section">
+                <span style="font-size:1rem;font-weight:700;letter-spacing:.04em;">SPRINGFIELD PROPERTIES</span>
+                <div class="footer-proof">
+                    <a class="footer-score" href="https://maps.app.goo.gl/dFWDBZRdcHrK2ceL6" target="_blank"
+                        rel="noopener noreferrer">
+                        <svg class="google-mark" viewBox="0 0 24 24">
+                            <path fill="#4285F4"
+                                d="M23.52 12.27c0-.82-.07-1.6-.2-2.36H12v4.47h6.46a5.52 5.52 0 0 1-2.4 3.62v3h3.88c2.27-2.09 3.58-5.17 3.58-8.83z">
+                            </path>
+                            <path fill="#34A853"
+                                d="M12 24c3.24 0 5.96-1.08 7.94-2.91l-3.88-3.01c-1.08.72-2.45 1.15-4.06 1.15-3.13 0-5.78-2.11-6.73-4.95H1.26v3.11A12 12 0 0 0 12 24z">
+                            </path>
+                            <path fill="#FBBC05"
+                                d="M5.27 14.28a7.2 7.2 0 0 1 0-4.56V6.61H1.26a12 12 0 0 0 0 10.78l4.01-3.11z"></path>
+                            <path fill="#EA4335"
+                                d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.44-3.44C17.95 1.19 15.24 0 12 0A12 12 0 0 0 1.26 6.61l4.01 3.11C6.22 6.88 8.87 4.75 12 4.75z">
+                            </path>
+                        </svg>
+                        <span>4.8</span>
+                        <span class="stars" role="img" aria-label="Google rating: 5 out of 5">
+                            <svg class="star" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 1.6l2.47 5.2 5.53.78-4 4.02.95 5.8L10 14.7l-4.95 2.7.95-5.8-4-4.02 5.53-.78z"
+                                    fill="currentColor"></path>
+                            </svg>
+                            <svg class="star" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 1.6l2.47 5.2 5.53.78-4 4.02.95 5.8L10 14.7l-4.95 2.7.95-5.8-4-4.02 5.53-.78z"
+                                    fill="currentColor"></path>
+                            </svg>
+                            <svg class="star" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 1.6l2.47 5.2 5.53.78-4 4.02.95 5.8L10 14.7l-4.95 2.7.95-5.8-4-4.02 5.53-.78z"
+                                    fill="currentColor"></path>
+                            </svg>
+                            <svg class="star" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 1.6l2.47 5.2 5.53.78-4 4.02.95 5.8L10 14.7l-4.95 2.7.95-5.8-4-4.02 5.53-.78z"
+                                    fill="currentColor"></path>
+                            </svg>
+                            <svg class="star" viewBox="0 0 20 20">
+                                <path
+                                    d="M10 1.6l2.47 5.2 5.53.78-4 4.02.95 5.8L10 14.7l-4.95 2.7.95-5.8-4-4.02 5.53-.78z"
+                                    fill="currentColor"></path>
+                            </svg>
+                        </span>
                     </a>
-                </div>
-
-                <div class="relative">
-                    <div class="flex items-end h-64 gap-2 pb-8 border-b border-silver/20 relative">
-                        <!-- Chart Bars -->
-                        <div class="w-1/3 bg-silver/20 hover:bg-cyan/80 transition-colors h-[20%] relative group">
-                            <div
-                                class="absolute -top-8 left-0 right-0 text-center text-sm font-display opacity-0 group-hover:opacity-100 transition-opacity">
-                                20%</div>
-                        </div>
-                        <div class="w-1/3 bg-silver/40 hover:bg-cyan/80 transition-colors h-[50%] relative group">
-                            <div
-                                class="absolute -top-8 left-0 right-0 text-center text-sm font-display opacity-0 group-hover:opacity-100 transition-opacity">
-                                50%</div>
-                        </div>
-                        <div class="w-1/3 bg-silver/80 hover:bg-cyan transition-colors h-[30%] relative group">
-                            <div
-                                class="absolute -top-8 left-0 right-0 text-center text-sm font-display text-cyan group-hover:text-pearl opacity-0 group-hover:opacity-100 transition-colors">
-                                30%</div>
-                        </div>
-                    </div>
-                    <div class="flex text-xs uppercase tracking-widest text-silver/50 mt-4">
-                        <div class="w-1/3 text-center">Booking</div>
-                        <div class="w-1/3 text-center">Construction</div>
-                        <div class="w-1/3 text-center text-pearl">Handover</div>
-                    </div>
+                    <ul class="footer-socials">
+                        <li><a class="social-link" href="https://www.facebook.com/springfielduae" target="_blank"
+                                rel="noopener noreferrer" aria-label="Facebook"><svg class="social-icon"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z">
+                                    </path>
+                                </svg></a></li>
+                        <li><a class="social-link" href="https://x.com/springfieldubai" target="_blank"
+                                rel="noopener noreferrer" aria-label="X"><svg class="social-icon" viewBox="0 0 24 24"
+                                    fill="currentColor">
+                                    <path
+                                        d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z">
+                                    </path>
+                                </svg></a></li>
+                        <li><a class="social-link" href="https://www.linkedin.com/company/springfield-real-estate"
+                                target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="social-icon"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
+                                    </path>
+                                </svg></a></li>
+                        <li><a class="social-link" href="https://www.instagram.com/springfielduae" target="_blank"
+                                rel="noopener noreferrer" aria-label="Instagram"><svg class="social-icon"
+                                    viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm7.846-10.405a1.441 1.441 0 0 1-2.88 0 1.44 1.44 0 0 1 2.88 0z">
+                                    </path>
+                                </svg></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- FAQ & Inquire -->
-    <section id="inquire" class="py-32 relative bg-pearl text-midnight">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-24">
-
-            <!-- FAQ -->
-            <div>
-                <h2 class="text-sm uppercase tracking-[0.3em] text-cyan-600 mb-12">05 / Intelligence</h2>
-
-                <div class="space-y-6">
-                    <div class="border-b border-midnight/10 pb-6">
-                        <h4 class="text-lg font-display mb-3">What types of units are available?</h4>
-                        <p class="text-midnight/70 text-sm leading-relaxed">The development offers luxury residences
-                            from 2- and 3-bedroom suites to exclusive 4-, 5-, 6-, and 7-bedroom penthouses, inspired by
-                            iconic Mercedes-Benz models.</p>
-                    </div>
-                    <div class="border-b border-midnight/10 pb-6">
-                        <h4 class="text-lg font-display mb-3">Is the property freehold?</h4>
-                        <p class="text-midnight/70 text-sm leading-relaxed">Yes, it is a freehold development, allowing
-                            both UAE nationals and international buyers full ownership rights.</p>
-                    </div>
-                    <div class="border-b border-midnight/10 pb-6">
-                        <h4 class="text-lg font-display mb-3">When is the expected handover?</h4>
-                        <p class="text-midnight/70 text-sm leading-relaxed">Handover for Mercedes-Benz Places by
-                            Binghatti is scheduled for Q4 2026.</p>
-                    </div>
+        <!-- Footer Nav -->
+        <div class="footer-inner container">
+            <nav class="footer-nav" aria-label="Footer">
+                <div>
+                    <h2 class="footer-heading">Buy, rent and sell</h2>
+                    <ul class="footer-list">
+                        <li><a class="footer-link" href="/for-sale/">Properties for sale</a></li>
+                        <li><a class="footer-link" href="/for-rent/">Properties to rent</a></li>
+                        <li><a class="footer-link" href="/projects/">Off-plan projects</a></li>
+                        <li><a class="footer-link" href="/sell/">Sell your property</a></li>
+                    </ul>
                 </div>
-            </div>
-
-            <!-- Form -->
-            <div class="bg-white p-8 md:p-12 border border-midnight/10 shadow-xl shadow-midnight/5">
-                <h3 class="text-3xl font-display font-light mb-2">Secure your suite.</h3>
-                <p class="text-midnight/50 text-sm mb-10">Prices, payment plans and availability. A specialist will
-                    respond shortly.</p>
-
-                <form class="space-y-6">
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest text-midnight/50 mb-2">Name</label>
-                        <input type="text"
-                            class="w-full bg-transparent border-b border-midnight/20 px-0 py-3 text-midnight focus:outline-none focus:border-cyan-600 transition-colors placeholder:text-midnight/20"
-                            placeholder="John Doe">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest text-midnight/50 mb-2">Email</label>
-                        <input type="email"
-                            class="w-full bg-transparent border-b border-midnight/20 px-0 py-3 text-midnight focus:outline-none focus:border-cyan-600 transition-colors placeholder:text-midnight/20"
-                            placeholder="john@example.com">
-                    </div>
-                    <div>
-                        <label class="block text-xs uppercase tracking-widest text-midnight/50 mb-2">Phone</label>
-                        <input type="tel"
-                            class="w-full bg-transparent border-b border-midnight/20 px-0 py-3 text-midnight focus:outline-none focus:border-cyan-600 transition-colors placeholder:text-midnight/20"
-                            placeholder="+971 50 123 4567">
-                    </div>
-                    <button type="button"
-                        class="w-full bg-midnight text-pearl py-4 uppercase tracking-widest text-sm font-medium hover:bg-cyan-600 hover:text-white transition-colors mt-8">
-                        Register Interest
-                    </button>
-                    <p class="text-[10px] text-midnight/40 text-center mt-4">By submitting this you agree to our Privacy
-                        Policy.</p>
-                </form>
-            </div>
+                <div>
+                    <h2 class="footer-heading">Explore</h2>
+                    <ul class="footer-list">
+                        <li><a class="footer-link" href="/areas/">Communities</a></li>
+                        <li><a class="footer-link" href="/developer/">Developers</a></li>
+                        <li><a class="footer-link" href="/projects/?status=new">New launches</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="footer-heading">Insight</h2>
+                    <ul class="footer-list">
+                        <li><a class="footer-link" href="/reports/">Market reports</a></li>
+                        <li><a class="footer-link" href="/blog/">Insights</a></li>
+                        <li><a class="footer-link" href="/press/">Press</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="footer-heading">Company</h2>
+                    <ul class="footer-list">
+                        <li><a class="footer-link" href="/about-us/">About us</a></li>
+                        <li><a class="footer-link" href="/team/">Our team</a></li>
+                        <li><a class="footer-link" href="/careers/">Careers</a></li>
+                        <li><a class="footer-link" href="/contact-us/">Contact us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="footer-heading">Visit us</h2>
+                    <ul class="footer-list">
+                        <li><span class="footer-office">Dubai, Business Bay</span>Office 102-106, Building 2, Bay Square
+                        </li>
+                        <li><span class="footer-office">Abu Dhabi, Reem Island</span>Office 149 &amp; 150, Wafra Square
+                        </li>
+                        <li><a class="footer-link" href="tel:+971506319606">+971 50 631 9606</a></li>
+                        <li><a class="footer-link"
+                                href="mailto:info@springfieldproperties.ae">info@springfieldproperties.ae</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="border-t border-silver/10 py-12 text-center text-silver/40 text-sm">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-            <div class="font-display tracking-widest uppercase">Springfield Properties</div>
-            <div>&copy; 2026 Springfield Properties. All rights reserved. RERA-licensed, ORN 11929.</div>
+        <!-- Legal -->
+        <div class="footer-legal container">
+            <p>&copy; 2026 Springfield Properties. All rights reserved. <span class="footer-note">RERA-licensed, ORN
+                    11929. Established 2008.</span></p>
+            <ul>
+                <li><a class="footer-link" href="/privacy-policy/">Privacy policy</a></li>
+                <li><a class="footer-link" href="/terms-of-service/">Terms of service</a></li>
+            </ul>
         </div>
     </footer>
 
+    <!-- WhatsApp Float -->
+    <a class="whatsapp-float"
+        href="https://wa.me/971506319606?text=Hi%20Springfield%20Properties%2C%20I%20have%20a%20question%20about%20Furnished%20Sp%20S%206938.%0Ahttps%3A%2F%2Fspringfieldproperties.ae%2Ffor-sale%2Ffurnished-sp-s-6938%2F"
+        target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z">
+            </path>
+        </svg>
+    </a>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // Header shadow on scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.classList.toggle('scrolled', window.scrollY > 10);
+        });
+
+        // Mobile nav toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navList = document.querySelector('.nav-list');
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+                navToggle.setAttribute('aria-expanded', String(!isOpen));
+                navList.style.display = isOpen ? 'none' : 'flex';
+                if (!isOpen) {
+                    navList.style.flexDirection = 'column';
+                    navList.style.position = 'absolute';
+                    navList.style.top = '72px';
+                    navList.style.left = '0';
+                    navList.style.right = '0';
+                    navList.style.background = '#fff';
+                    navList.style.borderBottom = '1px solid #e8e8e8';
+                    navList.style.padding = '16px 24px';
+                    navList.style.boxShadow = '0 8px 24px rgba(0,0,0,.08)';
+                } else {
+                    navList.removeAttribute('style');
+                }
+            });
+        }
+
+        // Phone country code selector
+        const phoneSelect = document.getElementById('phone-country');
+        const phoneDial = document.querySelector('.field-phone-dial');
+        if (phoneSelect && phoneDial) {
+            const codes = { AE: '971', US: '1', GB: '44', IN: '91', SA: '966', PK: '92' };
+            phoneSelect.addEventListener('change', (e) => {
+                phoneDial.textContent = '+' + (codes[e.target.value] || '971');
+            });
+        }
+
+        // Form submission prevention (demo)
+        document.getElementById('enquiry-form')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your enquiry! Our team will contact you shortly.');
+            e.target.reset();
+        });
+
+        document.getElementById('subscribe-form')?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for subscribing!');
+            e.target.reset();
+        });
+    </script>
 </body>
 
 </html>

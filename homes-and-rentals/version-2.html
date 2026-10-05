@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6015 Turner Shadow Ln | Sightro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Ultra-modern font pairing: Outfit for headers, Inter for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@200;300;400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            DEFAULT: '#00b259',
+                            hover: '#00994d',
+                            glow: 'rgba(0, 178, 89, 0.15)',
+                        },
+                        surface: {
+                            dark: '#0a0a0a',
+                            light: '#ffffff',
+                            gray: '#f4f4f5',
+                        }
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.05)',
+                        'neon': '0 0 20px rgba(0, 178, 89, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            background-color: #0a0a0a; /* Base dark */
+        }
+
+        /* Glassmorphism utilities */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .dark-glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Typography animations */
+        .reveal-text {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        }
+
+        /* Image treatments */
+        .img-hover-scale {
+            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .group:hover .img-hover-scale {
+            transform: scale(1.05);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-thumb { background: #333; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #00b259; }
+
+        /* Blob gradient background */
+        .blob-bg {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,178,89,0.15) 0%, rgba(10,10,10,0) 70%);
+            top: -200px;
+            right: -200px;
+            border-radius: 50%;
+            z-index: 0;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body class="text-white selection:bg-brand selection:text-white relative overflow-x-hidden">
+
+    <!-- Navbar (Glass) -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+        <div class="max-w-[1600px] mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 relative z-10">
+                <img src="https://www.sightro.ai/assets/logo.png" alt="Sightro" class="h-6 object-contain">
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8 font-sans text-sm font-medium">
+                <a href="#overview" class="text-white/60 hover:text-white transition-colors">Overview</a>
+                <a href="#gallery" class="text-white/60 hover:text-white transition-colors">Gallery</a>
+                <a href="#ai-vision" class="text-brand hover:text-brand-hover flex items-center gap-2 transition-colors">
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    AI Vision
+                </a>
+            </div>
+
+            <a href="#contact" class="hidden md:inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white text-surface-dark font-sans text-sm font-semibold hover:bg-gray-200 transition-colors">
+                Contact Agent
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION (Dark Mode) -->
+    <header class="relative min-h-[95vh] flex items-center pt-24 pb-20 overflow-hidden">
+        <div class="blob-bg"></div>
+        
+        <div class="max-w-[1600px] mx-auto w-full px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+            <!-- Left Text -->
+            <div class="lg:col-span-5 flex flex-col gap-6">
+                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full border border-brand/30 bg-brand/10 w-max text-brand text-xs font-semibold tracking-wide uppercase font-sans">
+                    <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
+                    Just Listed • Sugar Land
+                </div>
+                
+                <h1 class="font-display text-6xl md:text-7xl lg:text-[5rem] font-bold leading-[1.05] tracking-tight">
+                    6015<br>
+                    Turner<br>
+                    Shadow.
+                </h1>
+                
+                <p class="font-sans text-lg text-white/50 max-w-md font-light leading-relaxed">
+                    Masterfully built two-story home in the Avalon gated community at Riverstone. Top-grade luxury amenities from original owners.
+                </p>
+
+                <div class="flex items-center gap-8 mt-4 font-display">
+                    <div>
+                        <div class="text-4xl font-semibold">$850k</div>
+                        <div class="text-brand text-sm tracking-widest uppercase mt-1 font-sans">Price</div>
+                    </div>
+                    <div class="w-px h-12 bg-white/10"></div>
+                    <div>
+                        <div class="text-4xl font-semibold">4/3.5</div>
+                        <div class="text-white/40 text-sm tracking-widest uppercase mt-1 font-sans">Beds / Baths</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Image Showcase -->
+            <div class="lg:col-span-7 relative h-[60vh] lg:h-[75vh] w-full group rounded-3xl overflow-hidden">
+                <img src="https://mediahar.harstatic.com/803895763/hr/803895846.jpeg" alt="Front Exterior" class="absolute inset-0 w-full h-full object-cover img-hover-scale">
+                
+                <!-- Floating Glass Card overlay -->
+                <div class="absolute bottom-6 left-6 right-6 md:right-auto md:w-80 dark-glass-card rounded-2xl p-6 transform translate-y-2 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="w-12 h-12 rounded-full bg-brand flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                        </div>
+                        <span class="text-xs font-sans font-medium text-white/50">Taylor Morrison</span>
+                    </div>
+                    <div class="font-display text-xl font-medium mb-1">Bevington Floor Plan</div>
+                    <div class="font-sans text-sm text-white/60">Built 2013 • 0.18 Acres</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- BENTO GRID SECTION (Light Mode) -->
+    <main class="bg-surface-gray text-surface-dark py-32 rounded-t-[3rem] relative z-20 mt-[-2rem]" id="gallery">
+        <div class="max-w-[1600px] mx-auto px-6">
+            
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <div>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight mb-4">Uncompromised Design.</h2>
+                    <p class="font-sans text-gray-500 text-lg max-w-xl">Every corner of this residence has been optimized for natural light, scale, and modern functionality.</p>
+                </div>
+                <button class="px-6 py-3 rounded-full bg-surface-dark text-white font-sans text-sm font-medium hover:bg-brand transition-colors whitespace-nowrap">
+                    View Full Gallery
+                </button>
+            </div>
+
+            <!-- Detailed Bento Grid Layout -->
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 auto-rows-[280px]">
+                
+                <!-- 1: Large Feature Image (2x2) -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-2 row-span-2 rounded-[2rem] overflow-hidden relative group">
+                    <img src="https://mediahar.harstatic.com/803895763/lr/803895847.jpeg" alt="Living Room" class="absolute inset-0 w-full h-full object-cover img-hover-scale">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8 text-white p-4 backdrop-blur-md bg-white/10 rounded-2xl border border-white/20">
+                        <div class="font-display text-2xl font-bold mb-1">Soaring Ceilings</div>
+                        <div class="font-sans text-sm text-white/80">Walls of windows flood the space with natural light.</div>
+                    </div>
+                </div>
+
+                <!-- 2: Dark Stats Card (1x1) -->
+                <div class="col-span-1 md:col-span-1 lg:col-span-1 row-span-1 rounded-[2rem] bg-surface-dark text-white p-8 flex flex-col justify-center relative overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-brand/20 blur-3xl rounded-full"></div>
+                    <div class="space-y-4 relative z-10">
+                        <div class="font-display text-5xl font-bold text-brand">2</div>
+                        <div class="font-sans text-sm text-white/80 uppercase tracking-widest leading-relaxed">Primary Suites<br>(One on each level)</div>
+                    </div>
+                </div>
+
+                <!-- 3: Vertical Tall Image (1x2) -->
+                <div class="col-span-1 md:col-span-1 lg:col-span-1 row-span-2 rounded-[2rem] overflow-hidden relative group">
+                    <img src="https://mediahar.harstatic.com/803895763/lr/803895849.jpeg" alt="Primary Suite" class="absolute inset-0 w-full h-full object-cover img-hover-scale">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                    <div class="absolute bottom-8 left-8 text-white">
+                        <div class="font-display text-xl font-bold">Primary Retreat</div>
+                    </div>
+                </div>
+
+                <!-- 4: Light Text Info Card (1x1) -->
+                <div class="col-span-1 md:col-span-1 lg:col-span-1 row-span-1 rounded-[2rem] glass-card p-8 flex flex-col justify-between group hover:border-brand transition-colors">
+                    <svg class="w-8 h-8 text-brand mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <div>
+                        <div class="font-display text-xl font-bold mb-2 text-surface-dark group-hover:text-brand transition-colors">Entertainer's Dream</div>
+                        <p class="font-sans text-sm text-gray-600 leading-relaxed">Features a massive game room seamlessly connected to a dedicated media room and a tandem 3-car garage.</p>
+                    </div>
+                </div>
+
+                <!-- 5: Wide Image (2x1) -->
+                <div class="col-span-1 md:col-span-2 lg:col-span-2 row-span-1 rounded-[2rem] overflow-hidden relative group">
+                    <img src="https://mediahar.harstatic.com/803895763/lr/803895848.jpeg" alt="Kitchen" class="absolute inset-0 w-full h-full object-cover img-hover-scale">
+                    <div class="absolute top-6 left-6 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-surface-dark shadow-lg">Chef's Kitchen</div>
+                </div>
+
+                <!-- 6: Brand Color Card (1x1) -->
+                <div class="col-span-1 md:col-span-1 lg:col-span-1 row-span-1 rounded-[2rem] bg-brand text-white p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="font-sans text-sm text-white/80 uppercase tracking-widest mb-1">Lot Size</div>
+                        <div class="font-display text-4xl font-bold">0.18 <span class="text-xl font-medium">Acres</span></div>
+                    </div>
+                    <div>
+                        <div class="font-sans text-sm text-white/80 uppercase tracking-widest mb-1">HOA Fee</div>
+                        <div class="font-display text-2xl font-bold">$1,980 <span class="text-lg font-normal">/yr</span></div>
+                    </div>
+                </div>
+
+                <!-- 7: Map/Location proxy card (1x1) -->
+                <div class="col-span-1 md:col-span-1 lg:col-span-1 row-span-1 rounded-[2rem] bg-white border border-gray-200 p-8 flex flex-col justify-center items-center text-center relative overflow-hidden group">
+                    <div class="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+                    <svg class="w-10 h-10 text-gray-400 mb-4 group-hover:-translate-y-2 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    <div class="font-display text-2xl font-bold text-surface-dark mb-1">Avalon</div>
+                    <div class="font-sans text-sm text-gray-500 uppercase tracking-widest">at Riverstone</div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+    <!-- AI VISION PLUGIN (Dark Mode / Tech Vibe) -->
+    <section class="bg-[#050505] text-white py-32 relative overflow-hidden" id="ai-vision">
+        <!-- Tech grid background -->
+        <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px); background-size: 40px 40px;"></div>
+        
+        <div class="max-w-[1400px] mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-brand/10 text-brand mb-6 shadow-neon">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                </div>
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-4 tracking-tight">AI Interior Studio</h2>
+                <p class="font-sans text-white/50 text-lg max-w-2xl mx-auto">Upload a room photo or use our 3D engine to instantly redesign any space in this home using state-of-a-art AI visualization.</p>
+            </div>
+
+            <!-- Iframe Container -->
+            <div class="w-full rounded-[2rem] p-3 bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl relative">
+                <!-- Mac-like window controls -->
+                <div class="absolute top-6 left-6 flex gap-2 z-20">
+                    <div class="w-3 h-3 rounded-full bg-white/20"></div>
+                    <div class="w-3 h-3 rounded-full bg-white/20"></div>
+                    <div class="w-3 h-3 rounded-full bg-white/20"></div>
+                </div>
+                
+                <div class="w-full bg-[#f9f9f8] rounded-xl overflow-hidden h-[850px] md:h-[600px] relative z-10">
+                    <iframe id="propdeck-iframe"
+                        src="https://interior-frontend-propdeck.vercel.app/?client=home-and-rentals&loc_client=home-and-rentals"
+                        title="AI Interior Design Generator"
+                        class="w-full h-full border-none">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- AGENT & FOOTER (Dark to Brand Gradient) -->
+    <footer class="bg-surface-dark relative border-t border-white/5" id="contact">
+        <!-- Gradient splash -->
+        <div class="absolute bottom-0 left-0 w-full h-96 bg-gradient-to-t from-brand/10 to-transparent pointer-events-none"></div>
+
+        <div class="max-w-[1600px] mx-auto px-6 pt-32 pb-12 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center mb-32">
+                
+                <!-- Agent Info -->
+                <div class="lg:col-span-5 flex items-center gap-8">
+                    <div class="relative w-32 h-32 md:w-40 md:h-40 rounded-full p-1 bg-gradient-to-tr from-brand to-surface-dark flex-shrink-0">
+                        <img src="https://pics.harstatic.com/realtors/lataanil_112x112.jpg" alt="Lata Nair" class="w-full h-full rounded-full object-cover border-4 border-surface-dark">
+                    </div>
+                    <div>
+                        <div class="font-sans text-brand font-semibold tracking-widest uppercase text-xs mb-2">Listing Agent</div>
+                        <div class="font-display text-3xl md:text-4xl font-bold mb-2">Lata Nair</div>
+                        <div class="font-sans text-white/50 text-sm mb-4">RE/MAX Fine Properties</div>
+                        <a href="tel:+1234567890" class="font-sans text-white hover:text-brand transition-colors inline-flex items-center gap-2 font-medium">
+                            Call (123) 456-7890
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Form Card -->
+                <div class="lg:col-span-7">
+                    <div class="dark-glass-card rounded-[2rem] p-8 md:p-12">
+                        <h3 class="font-display text-2xl font-bold mb-8">Request a Private Showing</h3>
+                        <form class="grid grid-cols-1 md:grid-cols-2 gap-6 font-sans">
+                            <input type="text" placeholder="First Name" class="bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white placeholder-white/30 focus:outline-none focus:border-brand transition-colors">
+                            <input type="text" placeholder="Last Name" class="bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white placeholder-white/30 focus:outline-none focus:border-brand transition-colors">
+                            <input type="email" placeholder="Email Address" class="bg-white/5 border border-white/10 rounded-xl px-6 py-4 text-white placeholder-white/30 focus:outline-none focus:border-brand transition-colors md:col-span-2">
+                            <button type="button" class="md:col-span-2 bg-brand hover:bg-brand-hover text-white font-semibold py-4 rounded-xl transition-colors mt-2">
+                                Send Request
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Bottom Line -->
+            <div class="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/10">
+                <img src="https://www.sightro.ai/assets/logo.png" alt="Sightro" class="h-5 object-contain opacity-50 grayscale mb-4 md:mb-0">
+                <div class="font-sans text-xs text-white/30">
+                    © 2026 Sightro Exclusive. Powered by AI.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

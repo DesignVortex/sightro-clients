@@ -232,17 +232,23 @@ document.addEventListener('DOMContentLoaded', () => {
      7. FLOATING BOTTOM BAR
      ========================================================================== */
   const floatingBar = document.getElementById('floating-bottom-bar');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-      floatingBar?.classList.add('visible');
-    } else {
-      floatingBar?.classList.remove('visible');
-    }
-  });
+  if (floatingBar) {
+    floatingBar.classList.add('visible');
+  }
 
   /* ==========================================================================
-     8. DISCOVER VIDEO CONTROLS
+     8. VIDEO CONTROLS (Hero, Discover, and World Videos)
      ========================================================================== */
+  // Hero Video Autoplay Assurance
+  const heroVideo = document.querySelector('#sec-hero video');
+  if (heroVideo) {
+    heroVideo.muted = true;
+    heroVideo.play().catch(err => {
+      console.log('Hero autoplay prevented, waiting for user interaction:', err);
+    });
+  }
+
+  // Discover Video Controls
   const playDiscoverBtn = document.querySelector('.btn-play-discover');
   const pauseDiscoverBtn = document.querySelector('.btn-pause-discover');
   const discoverVideo = document.querySelector('#sec-discover video');
@@ -264,6 +270,37 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         discoverVideo.pause();
       }
+    });
+  }
+
+  // World Video Controls
+  const playWorldBtn = document.querySelector('.btn-play-world');
+  const worldVideo = document.querySelector('#sec-world-video video');
+  const pauseWorldBtn = document.querySelector('#sec-world-video button:not(.btn-play-world)');
+
+  if (playWorldBtn && worldVideo) {
+    playWorldBtn.addEventListener('click', () => {
+      worldVideo.play();
+      playWorldBtn.classList.add('hidden');
+    });
+  }
+  if (pauseWorldBtn && worldVideo) {
+    pauseWorldBtn.addEventListener('click', () => {
+      if (worldVideo.paused) {
+        worldVideo.play();
+        playWorldBtn?.classList.add('hidden');
+      } else {
+        worldVideo.pause();
+        playWorldBtn?.classList.remove('hidden');
+      }
+    });
+  }
+  if (worldVideo) {
+    worldVideo.addEventListener('play', () => {
+      playWorldBtn?.classList.add('hidden');
+    });
+    worldVideo.addEventListener('pause', () => {
+      playWorldBtn?.classList.remove('hidden');
     });
   }
 

@@ -140,7 +140,7 @@
 
     #plugin-scaler {
       width: 1240px;
-      height: 660px;
+      height: 800px;
       transform-origin: top left;
       flex-shrink: 0;
     }
@@ -412,10 +412,9 @@
           <section id="plugin" class="w-full mb-6">
             <div id="plugin-container" class="rounded-xl overflow-hidden border border-gray-200 shadow-sm">
               <div id="plugin-scaler">
-                <iframe id="propdeck-iframe"
-                  src="https://interior-frontend-propdeck.vercel.app/?client=the-wow-tower&loc_client=the-wow-tower"
+                <iframe id="propdeck-iframe" src="https://sightro-frontend.vercel.app/property/3XFf8gOKGexk70bqU2bXza"
                   title="AI Interior Design Generator"
-                  style="width: 1240px; height: 660px; border: none; display: block;" loading="lazy"></iframe>
+                  style="width: 1240px; height: 800px; border: none; display: block;" loading="lazy"></iframe>
               </div>
             </div>
           </section>
@@ -1086,15 +1085,18 @@
     (function () {
       const container = document.getElementById("plugin-container");
       const scaler = document.getElementById("plugin-scaler");
+      const iframe = document.getElementById("propdeck-iframe");
       const NATIVE_W = 1240;
-      const NATIVE_H = 660;
 
       function resize() {
+        if (!container || !scaler) return;
+        const nativeH = (iframe && parseInt(iframe.style.height)) || 800;
+        scaler.style.height = nativeH + "px";
         const cw = container.clientWidth;
         const scale = Math.min(1, cw / NATIVE_W);
         scaler.style.transform = "scale(" + scale + ")";
         scaler.style.transformOrigin = "top left";
-        container.style.height = NATIVE_H * scale + "px";
+        container.style.height = nativeH * scale + "px";
       }
 
       window.addEventListener("resize", resize);
